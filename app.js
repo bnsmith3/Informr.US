@@ -20,6 +20,10 @@ app.get('/', (req, res) => {
 	res.render('index.html')
 });
 
+app.get('/quiz', (req, res) => {
+    res.render('views/quiz.html');
+});
+
 app.get('/geolookup/:lat/:lon', (req, res) => {
 	const lat = req.params.lat;
 	const lon = req.params.lon;
