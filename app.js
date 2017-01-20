@@ -17,11 +17,11 @@ app.use(express.static('src'));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-	res.render('index.html')
+	res.render('index.html');
 });
 
 app.get('/quiz', (req, res) => {
-    res.render('views/quiz.html');
+    res.sendFile(`${__dirname}/src/views/quiz.html`);
 });
 
 app.get('/geolookup/:lat/:lon', (req, res) => {
